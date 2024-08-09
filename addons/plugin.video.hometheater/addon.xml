@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.hometheater" version="1.0.0" name="Home Theater" provider-name="YourName">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.beautifulsoup4" version="4.12.2"/>
+        <import addon="script.module.requests" version="2.31.0"/>
+        <import addon="script.module.resolveurl" version="5.1.0"/>
+        <import addon="script.module.dateutil" version="2.8.2"/>
+        <import addon="script.module.aiohttp" version="3.8.1-2"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Your addon's summary</summary>
+        <description>Your addon's description</description>
+        <platform>all</platform>
+        <language>en</language>
+        <license>Your license</license>
+    </extension>
+</addon>

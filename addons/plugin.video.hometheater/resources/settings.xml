@@ -1,0 +1,4 @@
+<settings>
+    <!-- Example setting -->
+    <setting id="example_setting" type="text" label="Example Setting" default="Default Value"/>
+</settings>
