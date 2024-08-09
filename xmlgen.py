@@ -12,6 +12,11 @@ def generate_addons_xml():
             addon_xml_path = os.path.join("./addons", addon, "addon.xml")
             with open(addon_xml_path, "r", encoding="UTF-8") as f:
                 addon_xml = f.read().strip()
+
+            # Remove the XML declaration if it exists
+            if addon_xml.startswith('<?xml'):
+                addon_xml = addon_xml.split("?>", 1)[1].strip()
+
         except Exception as e:
             print(f"Excluding {addon} for error: {e}")
             continue
