@@ -73,12 +73,14 @@ def tvshow(url):
         chdet = {}
         icon = showList.select_one('div>a>img')['src']
         fanart = icon.replace('-370x208','') if "-370x208" in icon else icon
-        fileExist = os.path.dirname(__file__)
+        # fileExist = os.path.dirname(__file__)
         fileimgbd = ("-".join(showList.text.lower().split(" ")) + "_" + "backdrop.webp").replace("---", "").replace(":", "").strip()
         fileimgposter = ("-".join(showList.text.lower().split(" ")) + "_" + "poster.webp").replace("---", "").replace(":", "").strip()
-        poster = os.path.join(os.path.dirname(fileExist), "Images", fileimgposter)
+        # poster = os.path.join(os.path.dirname(fileExist), "Images", fileimgposter)
+        poster = f"https://alham0046.github.io/hometheater-kodi-repo/static/dailysoap/Images/{fileimgposter}"
         # log(find=poster)
-        backdrop = os.path.join(os.path.dirname(fileExist), "Images", fileimgbd)
+        # backdrop = os.path.join(os.path.dirname(fileExist), "Images", fileimgbd)
+        backdrop = f"https://alham0046.github.io/hometheater-kodi-repo/static/dailysoap/Images/{fileimgbd}"
         chdet["chname"] = " ".join(url.split("/")[-1].split("-")).upper()
         chdet["showname"] = showList.text.strip()
         chdet["poster"] = poster if os.path.exists(poster) else icon
