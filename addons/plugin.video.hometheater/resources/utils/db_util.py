@@ -17,7 +17,8 @@ def tvCache(channelList = []):
                     Show_Name TEXT,
                     Show_Poster TEXT,
                     Show_Backdrop TEXT,
-                    Show_Url TEXT )"""
+                    Show_Url TEXT 
+                    Show_Status TEXT)"""
     cur.execute(fileCache)
     conn.commit()
     for chDetail in channelList:
@@ -50,7 +51,7 @@ def tvEpisodeCache(episodeList = []):
                     Episode_Date TEXT,
                     Episode_Title TEXT,
                     Episode_Img TEXT,
-                    Episode_Url)"""
+                    Episode_Url TEXT)"""
     cur.execute(fileCache)
     conn.commit()
     for epiDetail in episodeList:
@@ -112,9 +113,4 @@ def getdb(dbname, tablename, condition, whereclause, select = "*", orderby = Non
     else:
         return []
 
-# dtb = getdb("tvCache.db", "TVshowCache", "ZEE TV")
-# if not dtb:
-#     print("success")
-# else:
-#     print(dtb)
         
