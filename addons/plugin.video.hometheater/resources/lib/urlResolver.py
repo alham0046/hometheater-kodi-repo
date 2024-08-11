@@ -6,6 +6,8 @@ def check_hosted_media(vid_url, subs=False):
 
 def resolve_url(url, subs=False):
     hmf = check_hosted_media(url, subs)
+    if not hmf:
+        return False
 
     try:
         if subs:

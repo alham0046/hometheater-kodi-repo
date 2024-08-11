@@ -231,10 +231,15 @@ def get_VideoLink(vidurl):
         linkSoup = soupObject(links, '#content')
         iframe = linkSoup.select_one('iframe').get('src')
         stream_Url = resolve_url(iframe, subs=True)
-        stream_Url = stream_Url.get('url')
-        xbmc.log(f"Stream url is: {stream_Url}", xbmc.LOGDEBUG)
-        return stream_Url
+        if stream_Url:
+            stream_Url = stream_Url.get('url')
+            xbmc.log(f"Stream url is: {stream_Url}", xbmc.LOGDEBUG)
+            return stream_Url
+        else:
+            return None
     if x := workingLink('TVlogy'):
+        return x
+    elif x := workingLink('VKprime'):
         return x
     elif x := workingLink('Netflix'):
         return x

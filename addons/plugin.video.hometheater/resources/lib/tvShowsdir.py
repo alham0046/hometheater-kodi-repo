@@ -89,8 +89,6 @@ def tvshow(url):
         chdet["url"] = f"https://www.yodesitv.info/category/{'-'.join(chdet['chname'].lower().split(' '))}/{'-'.join(chdet['showname'].lower().split(' '))}/"
         chdet["Show_Status"] = "Airing"
         channelDetail.append(chdet)
-        # print(showList.text)
-    # print(channelDetail)
     tvCache(channelDetail)
     return channelDetail
 
