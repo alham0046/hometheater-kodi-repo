@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.hometheater" version="1.0.0" name="Home Theater" provider-name="YourName">
+<addon id="plugin.video.hometheater" version="2.0.0" name="Home Theater" provider-name="YourName">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.beautifulsoup4" version="4.12.2"/>
@@ -8,6 +8,7 @@
         <import addon="script.module.resolveurl" version="5.1.0"/>
         <import addon="script.module.dateutil" version="2.8.2"/>
         <!-- <import addon="script.module.aiohttp" version="3.8.1-2"/> -->
+        <import addon="script.module.pymongo" version="4.7.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
@@ -34,6 +35,14 @@
             <platform>all</platform>
         </extension>
     </extension>
+</addon>
+
+<!-- <?xml version="1.0" encoding="UTF-8" standalone="yes"?> -->
+<addon id="script.module.pymongo" name="pymongo" version="4.8.0" provider-name="YourName">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
 </addon>
 
 <addon id="script.module.resolveurl" name="ResolveURL" version="5.1.144" provider-name="gujal">

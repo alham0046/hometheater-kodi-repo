@@ -10,7 +10,6 @@ import os
 import concurrent.futures
 import requests
 from dateutil import parser
-import threading
 from resources.lib.tvShows import get_VideoLink
 
 urlmain = "https://www.yodesitv.info/"
@@ -83,8 +82,8 @@ def tvshow(url):
         backdrop = f"https://alham0046.github.io/hometheater-kodi-repo/static/dailysoap/Images/{fileimgbd}"
         chdet["chname"] = " ".join(url.split("/")[-1].split("-")).upper()
         chdet["showname"] = showList.text.strip()
-        chdet["poster"] = poster if os.path.exists(poster) else icon
-        chdet["backdrop"] = backdrop if os.path.exists(backdrop) else fanart
+        chdet["poster"] = poster if requests.get(poster).status_code == 200 else icon
+        chdet["backdrop"] = backdrop if requests.get(backdrop).status_code == 200 else fanart
         # log(find=chdet["showname"])
         chdet["url"] = f"https://www.yodesitv.info/category/{'-'.join(chdet['chname'].lower().split(' '))}/{'-'.join(chdet['showname'].lower().split(' '))}/"
         chdet["Show_Status"] = "Airing"

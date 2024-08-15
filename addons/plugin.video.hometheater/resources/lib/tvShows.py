@@ -9,8 +9,6 @@ import re
 import concurrent.futures
 import os
 from dateutil import parser
-import asyncio
-import aiohttp
 import sys
 # from datetime import datetime
 
@@ -240,6 +238,8 @@ def get_VideoLink(vidurl):
     if x := workingLink('TVlogy'):
         return x
     elif x := workingLink('VKprime'):
+        return x
+    elif x := workingLink('Speedwatch'):
         return x
     elif x := workingLink('Netflix'):
         return x

@@ -90,7 +90,7 @@ def deletedb(dbname, tablename, whereclause, condition):
 # tvshow()
 # deletedb("tvEpisodes.db", "tvEpisodes", "Channel_Name", "STAR BHARAT")
 
-dblist = getdb(dbname="tvEpisodes.db", tablename="tvEpisodes", whereclause="Channel_Name", condition="STAR BHARAT")
+dblist = getdb(dbname="tvEpisodes1.db", tablename="tvEpisodes", whereclause="Channel_Name", condition="STAR BHARAT")
 # dblist = getdb(dbname="tvCache.db", tablename="TVshowCache", whereclause="Channel_Name", condition="STAR PLUS", select="Show_Url")
 print(dblist)
 # value = [val[4] for val in dblist if val[0] == "STAR PLUS"]

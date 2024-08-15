@@ -17,7 +17,7 @@ def tvCache(channelList = []):
                     Show_Name TEXT,
                     Show_Poster TEXT,
                     Show_Backdrop TEXT,
-                    Show_Url TEXT 
+                    Show_Url TEXT,
                     Show_Status TEXT)"""
     cur.execute(fileCache)
     conn.commit()
