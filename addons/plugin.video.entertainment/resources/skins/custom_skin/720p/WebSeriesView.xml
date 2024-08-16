@@ -1,0 +1,19 @@
+<window type="dialog">
+    <controls>
+        <!-- Define the background -->
+        <image posX="0" posY="0" width="1280" height="720" texture="background.png" />
+
+        <!-- Define the header label -->
+        <label id="1" posX="50" posY="50" width="300" height="50" label="Kota Factory" textColor="black" />
+
+        <!-- Define the container for tab buttons for seasons -->
+        <group id="5001" posX="50" posY="100" width="600" height="50">
+            <!-- Buttons will be added dynamically -->
+        </group>
+
+        <!-- Define a container for lists of episodes -->
+        <group id="5002" posX="50" posY="160" width="600" height="500">
+            <!-- Lists will be added dynamically -->
+        </group>
+    </controls>
+</window>
