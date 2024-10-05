@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.entertainment" version="3.2.0" name="Home Entertainment" provider-name="YourName">
+<addon id="plugin.video.entertainment" version="3.2.5" name="Home Entertainment" provider-name="YourName">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.beautifulsoup4" version="4.12.2"/>
